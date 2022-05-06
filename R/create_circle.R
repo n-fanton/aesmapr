@@ -14,8 +14,8 @@
 #' create_circle(location = c(349950, 673605), radius = 1500)
 create_circle <- function(location, radius = 1000) {
   location %>%
-    # base::rbind() %>%
-    tibble::as_tibble() %>%
+    base::rbind() %>%
+    tibble::as_tibble(.name_repair = "unique") %>%
     sf::st_as_sf(coords = c(1,2), crs = 27700) %>%
     sf::st_buffer(dist = radius)
 }
