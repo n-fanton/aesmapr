@@ -36,7 +36,7 @@ create_map <- function(
   library("sf")
 
   # 1. Set location for mapping -----------------------------------------------
-  location <- aesmapr::find_postcode_centre("EH41 3FB")
+  location <- aesmapr::find_postcode_centre(postcode)
 
   # 2. Create bounding polygon for location -----------------------------------
   if (shape == "rectangle") {
