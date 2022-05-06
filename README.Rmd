@@ -1,0 +1,66 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# aesmapr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+`aesmapr` helps you create nice looking (decorative) maps of a local area. 
+
+Due to data availability, it can currently be used for GB locations only. 
+
+## Installation
+
+You can install the development version of aesmapr from 
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("n-fanton/aesmapr")
+```
+
+## Example
+
+The main function in `aesmapr` is `create_map()`, which allows you to vary the
+location, shape, and extent of your outputs. 
+
+```{r map_1}
+library("aesmapr")
+
+map_1 <- create_map(
+  postcode = "PH33 6TQ",
+  x_dist = 3000,
+  y_dist = 2000
+)
+
+map_1
+
+```
+
+Maps can also draw circular areas, rather than rectangles:
+
+```{r map_2}
+map_2 <- create_map(
+  postcode = "PH33 6TQ",
+  shape = "circle",
+  radius = 1500
+)
+
+map_2
+```
+
+I'll continue to add functionality to this package as I work more on it!
+

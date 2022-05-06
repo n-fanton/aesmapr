@@ -2,8 +2,8 @@ Package: aesmapr
 Type: Package
 Title: Create Aesthetic Maps Using sf and ggplot
 Version: 0.1.0
-Author: Nick Fanton
-Maintainer: nfanton@icloud.com
+Author: Nick Fanton <nfanton@icloud.com>
+Maintainer: Nick Fanton <nfanton@icloud.com>
 Description: Create aesthetic maps in R, centred on a UK postcode
 License: MIT + file LICENSE
 Encoding: UTF-8
